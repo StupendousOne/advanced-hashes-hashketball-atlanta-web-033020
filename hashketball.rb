@@ -173,19 +173,12 @@ def team_colors(team)
 end
 
 def player_numbers(name)
-  number = nil
+  home_numbers = []
   
-  game_hash[:home][:players].each do |player|
-    number = player[:number] if player[:player_name] == name
-  end
-  if !number then
-    game_hash[:away][:players].each do |player|
-      number = player[:number] if player[:player_name] == name
-    end
-  end
-
-  number = "Player not found" if !number
-  number
+  names << game_hash[:home][:team_name]
+  names << game_hash[:away][:team_name]
+  
+  names
 end
 
 def player_stats(name)
