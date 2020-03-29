@@ -151,11 +151,11 @@ def shoe_size(name)
 end
 
 def team_names(team)
-  
+  game_hash[team][:team_name]
 end
 
 def team_colors(team)
-  
+  game_hash[team][:colors]
 end
 
 def player_numbers(name)
@@ -186,7 +186,7 @@ def player_stats(name)
     end
   end
   
-  stats
+  stats.delete(:player_name) if stats
 
   stats = "Player not found" if !stats
   stats
