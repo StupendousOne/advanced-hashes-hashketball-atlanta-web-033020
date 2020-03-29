@@ -1,5 +1,5 @@
 # Write your code here!
-def game_hash()
+def game_hash
   final_hash = {
     home: {
       team_name: "Brooklyn Nets",
@@ -120,6 +120,8 @@ end
 
 def num_points_scored(name)
   points = nil
+  
+  pp game_hash
   
   game_hash()[:players].each do |player|
     points = player[:points] if player[:name] == name
