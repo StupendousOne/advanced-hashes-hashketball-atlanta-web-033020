@@ -135,7 +135,19 @@ def num_points_scored(name)
 end
 
 def shoe_size(name)
+  size = nil
   
+  game_hash[:home][:players].each do |player|
+    size = player[:points] if player[:player_name] == name
+  end
+  if !size then
+    game_hash[:away][:players].each do |player|
+      size = player[:points] if player[:player_name] == name
+    end
+  end
+
+  size = "Player not found" if !size
+  size
 end
 
 def team_names(team)
@@ -147,11 +159,35 @@ def team_colors(team)
 end
 
 def player_numbers(name)
+  number = nil
   
+  game_hash[:home][:players].each do |player|
+    number = player[:points] if player[:player_name] == name
+  end
+  if !number then
+    game_hash[:away][:players].each do |player|
+      points = player[:points] if player[:player_name] == name
+    end
+  end
+
+  points = "Player not found" if !points
+  points
 end
 
 def player_stats(name)
+  points = nil
   
+  game_hash[:home][:players].each do |player|
+    points = player[:points] if player[:player_name] == name
+  end
+  if !points then
+    game_hash[:away][:players].each do |player|
+      points = player[:points] if player[:player_name] == name
+    end
+  end
+
+  points = "Player not found" if !points
+  points
 end
 
 def big_shoe_rebounds(team)
