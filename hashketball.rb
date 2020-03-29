@@ -212,12 +212,14 @@ def big_shoe_rebounds()
     if player[:shoe_size] > size then
       points = player[:points]
       size = player[:shoe_size]
+    end
   end
   
   game_hash[:away][:players].each do |player|
     if player[:shoe_size] > size then
       points = player[:points]
       size = player[:shoe_size]
+    end
   end
   
  points 
