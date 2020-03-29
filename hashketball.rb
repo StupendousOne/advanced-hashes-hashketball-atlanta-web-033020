@@ -119,7 +119,14 @@ def game_hash
 end
 
 def num_points_scored(name)
+  points = nil
   
+  game_hash[:players].each |player| do
+    points = player[:points] if player[:name] == name
+  end
+  
+  points = "Player not found" if !points
+  points
 end
 
 def shoe_size(name)
