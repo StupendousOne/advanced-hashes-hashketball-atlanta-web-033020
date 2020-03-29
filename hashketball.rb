@@ -122,11 +122,27 @@ def num_points_scored(name)
   
 end
 
-def team_name(team)
+def shoe_sizes(name)
+  
+end
+
+def team_names(team)
   
 end
 
 def team_colors(team)
+  
+end
+
+def player_numbers(name)
+  
+end
+
+def player_stats(name)
+  
+end
+
+def big_shoe_rebounds(team)
   
 end
 
