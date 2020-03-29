@@ -166,28 +166,30 @@ def player_numbers(name)
   end
   if !number then
     game_hash[:away][:players].each do |player|
-      points = player[:points] if player[:player_name] == name
+      number = player[:points] if player[:player_name] == name
     end
   end
 
-  points = "Player not found" if !points
-  points
+  number = "Player not found" if !number
+  number
 end
 
 def player_stats(name)
-  points = nil
+  stats = nil
   
   game_hash[:home][:players].each do |player|
-    points = player[:points] if player[:player_name] == name
+    stats = player if player[:player_name] == name
   end
-  if !points then
+  if !stats then
     game_hash[:away][:players].each do |player|
-      points = player[:points] if player[:player_name] == name
+      stats = player if player[:player_name] == name
     end
   end
+  
+  stats
 
-  points = "Player not found" if !points
-  points
+  stats = "Player not found" if !stats
+  stats
 end
 
 def big_shoe_rebounds(team)
