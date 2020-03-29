@@ -172,13 +172,21 @@ def team_colors(team)
   colors
 end
 
-def player_numbers(name)
-  home_numbers = []
+def player_numbers(team)
+  numbers = []
   
-  names << game_hash[:home][:team_name]
-  names << game_hash[:away][:team_name]
+  if team = game_hash[:home][:team_name] 
+    then
+      game_hash[:home][:players].each do |player|
+        numbers << player[:number]
+      end
+    else
+      game_hash[:away][:players].each do |player|
+        numbers << player[:number]
+      end
+  end
   
-  names
+  numbers
 end
 
 def player_stats(name)
