@@ -150,8 +150,12 @@ def shoe_size(name)
   size
 end
 
-def team_names(team)
-  game_hash[team][:team_name]
+def team_names()
+  names = []
+  
+  name << game_hash[:home][:team_name]
+  
+  names
 end
 
 def team_colors(team)
