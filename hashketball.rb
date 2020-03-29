@@ -121,11 +121,13 @@ end
 def num_points_scored(name)
   points = nil
   
-  pp game_hash
-  
-  game_hash()[:players].each do |player|
+  game_hash[:home][:players].each do |player|
     points = player[:points] if player[:name] == name
   end
+  if !points then
+    game_hash[:away][:players].each do |player|
+      points = player[:points] if player[:name] == name
+    end
   
   points = "Player not found" if !points
   points
