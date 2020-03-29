@@ -84,12 +84,12 @@ def game_hash()
           player_name: "Desagna Diop",
           number: 2,
           shoe: 14,
-          points: 33,
-          rebounds: 3,
-          assists: 2,
-          steals: 1,
-          blocks: 1,
-          slam_dunk: 0
+          points: 24,
+          rebounds: 12,
+          assists: 12,
+          steals: 4,
+          blocks: 5,
+          slam_dunk: 5
         }, {
           player_name: "Ben Gordon",
           number: 8,
@@ -102,14 +102,14 @@ def game_hash()
           slam_dunk: 0
         }, {
           player_name: "Kemba Walker",
-          number: 1000,
-          shoe: ,
-          points: 1000,
-          rebounds: 1000,
-          assists: 1000,
-          steals: 1000,
-          blocks: 1000,
-          slam_dunk: 1000
+          number: 33,
+          shoe: 15,
+          points: 6,
+          rebounds: 12,
+          assists: 12,
+          steals: 7,
+          blocks: 5,
+          slam_dunk: 12
         }
       ]
     }
