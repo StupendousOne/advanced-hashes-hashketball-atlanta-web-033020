@@ -122,13 +122,13 @@ def num_points_scored(name)
   
 end
 
-def team_name()
+def team_name(team)
   
 end
 
-def team_colors()
-
-
+def team_colors(team)
+  
+end
 
 
 
