@@ -138,13 +138,13 @@ def shoe_size(name)
   size = nil
   
   game_hash[:home][:players].each do |player|
-    size = player[:shoe_size] if player[:player_name] == name
+    size = player[:shoe] if player[:player_name] == name
   end
   if !size then
     game_hash[:away][:players].each do |player|
       pp name
       pp player[:player_name]
-      size = player[:shoe_size] if player[:player_name] == name
+      size = player[:shoe] if player[:player_name] == name
     end
   end
 
