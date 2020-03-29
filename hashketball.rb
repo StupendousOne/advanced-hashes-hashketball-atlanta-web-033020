@@ -153,8 +153,8 @@ end
 def team_names()
   names = []
   
-  name << game_hash[:home][:team_name]
-  name << game_hash[:away][:team_name]
+  names << game_hash[:home][:team_name]
+  names << game_hash[:away][:team_name]
   
   names
 end
